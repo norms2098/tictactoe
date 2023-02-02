@@ -2,10 +2,13 @@ Hello! this is a simple tictactoe game I coded using HTML, CSS, and JS. It's fai
 
 What I did was I declared a 3x3 array which would update x or o depending on the round. X starts first so every mod%2==0 round, x fires. The indexes in the two dimensional array correspond with the positions of the buttons on the board as seen below:
 
-
-|[0][0]|[0][1]|[0][2]| 
-|[1][0]|[1][1]|[1][2]| 
+|------|------|------|
+|[0][0]|[0][1]|[0][2]|
+|------|------|------| 
+|[1][0]|[1][1]|[1][2]|
+|------|------|------| 
 |[2][0]|[2][1]|[2][2]|
+|------|------|------|
 
 
 With each button click, the code sets the value of the array element respective to the button position to either 'x' or 'o' depending on which is playing. Also, with each button press, the code checks if there are three consecutive x's or o's in a line. If in any round (before the round counter == 9) that condition is satisfied, the game will end and the winner will be determined. Once the game is over, all buttons are disabled.
