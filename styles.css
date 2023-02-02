@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #E9E9E8;
+}
+.header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    display:flex;
+    margin:auto;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
+    margin-top:10px;
+}
+.board button{
+    background-color: rgb(32, 38, 46);
+    flex: 1 0 30%;
+    border: 1px solid white;
+    color:white;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+}
+.board button:hover{
+
+    background-color: rgb(32, 38, 46,90%);
+}
+.board button:disabled{
+    background-color: black;
+    pointer-events: none;
+}
+.winner-text{
+    text-align: center;
+}
