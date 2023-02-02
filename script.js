@@ -14,6 +14,7 @@ var board=new Array(3);
     for(let i=0;i<board.length;i++){
         board[i]=new Array(3);
     }
+
 btn1.addEventListener('click',() => {
     if(counter%2==0){
         btn1.innerHTML="x";
@@ -23,7 +24,7 @@ btn1.addEventListener('click',() => {
         btn1.innerHTML="o";
         board[0][0]='o';
     }
-    //counter++;
+
     checkWinner();
     btn1.disabled=true;
     
@@ -38,7 +39,6 @@ btn2.addEventListener('click',() => {
         board[0][1]='o';
     }
 
-    //counter++;
     checkWinner();
     btn2.disabled=true;
 })
@@ -52,7 +52,6 @@ btn3.addEventListener('click',() => {
         board[0][2]='o';
     }
    
-    //counter++;
     checkWinner();
     btn3.disabled=true;
 })
@@ -66,7 +65,6 @@ btn4.addEventListener('click',() => {
         board[1][0]='o';
     }
     
-    //counter++;
     checkWinner();
     btn4.disabled=true;
 
@@ -80,8 +78,7 @@ btn5.addEventListener('click',() => {
         btn5.innerHTML="o"
         board[1][1]='o';
     }
-    
-    //counter++;
+
     checkWinner();
     btn5.disabled=true;
 })
@@ -94,7 +91,6 @@ btn6.addEventListener('click',() => {
         btn6.innerHTML="o"
         board[1][2]='o';
     }
-    //counter++;
     checkWinner();
     btn6.disabled=true;
 })
@@ -108,7 +104,6 @@ btn7.addEventListener('click',() => {
         board[2][0]='o';
     }
    
-    //counter++;
     checkWinner();
     btn7.disabled=true;
 })
@@ -121,7 +116,7 @@ btn8.addEventListener('click',() => {
         btn8.innerHTML="o"
         board[2][1]='o';
     }
-    //counter++;
+
     checkWinner();
     btn8.disabled=true;
 })
@@ -134,7 +129,7 @@ btn9.addEventListener('click',() => {
         btn9.innerHTML="o"
         board[2][2]='o';
     }
-    //counter++;
+ 
     checkWinner();
     btn9.disabled=true;
 })
