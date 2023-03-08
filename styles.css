@@ -1,4 +1,9 @@
 
+.roundcounter-container{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
 .gameboard{
     display:grid;
     grid-template-columns: repeat(3,10vw);
@@ -48,3 +53,5 @@
     cursor: pointer;
     
 }
+
+
