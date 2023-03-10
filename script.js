@@ -18,6 +18,7 @@ const gameFlowControl = () =>{
     let roundCounter = 1 ;
     let isGameOver = false;
 
+
     const getCurrentPlayer = () => {
         if (roundCounter % 2 == 0){
             return playerO.getPlayerSymbol();
@@ -30,7 +31,7 @@ const gameFlowControl = () =>{
         
     }
     return { getCurrentPlayer }
-}
+}();
 
 //controls the game displays
 const gameDisplayControl = () => {
@@ -47,3 +48,4 @@ const gameDisplayControl = () => {
 
 
 }
+
