@@ -20,12 +20,13 @@ const gameFlowControl = (() =>{
     let roundCounter = 0 ;
     let isGameOver = false;
 
-    const gamePlay = () =>{
+    const gameoverChecker = () =>{
         roundCounter++
         if(roundCounter == 9) {
-            console.log("gameover")
+            gameDisplayControl.displayGameOver();
         }
     }
+
     const getCurrentPlayer = () => {
         
         if (roundCounter % 2 == 0){
@@ -38,7 +39,7 @@ const gameFlowControl = (() =>{
     }
    
     
-    return { getCurrentPlayer, roundCounter, gamePlay }
+    return { getCurrentPlayer, roundCounter, gameoverChecker, isGameOver }
 })();
 
 //controls the game displays
@@ -51,11 +52,18 @@ const gameDisplayControl = (() => {
                 return;
             }
             e.target.textContent=gameFlowControl.getCurrentPlayer();
+            
 
-            gameFlowControl.gamePlay();
+            gameFlowControl.gameoverChecker();
+
+           
         })
     })
 
+    const displayGameOver=()=>{
+        console.log('gameover')
+    }
 
+    return { displayGameOver}
 })();
 
