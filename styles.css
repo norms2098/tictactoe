@@ -1,40 +1,63 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    background-color: #E9E9E8;
-}
-.header{
-    display:flex;
-    flex-direction: column;
+
+.roundcounter-container{
+    display: flex;
     justify-content: center;
+    font-size: large;
+}
+.gameboard{
+    display:grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    justify-content: center;
+    grid-auto-flow: row; 
+}
+
+
+
+.gameboard>div:nth-child(-n+3){
+    border-top:2px solid black;
+    
+    
+}
+
+.gameboard>div:nth-child(3n+1){
+    border-left: 2px solid black;
+}
+.gameboard>div:nth-child(3n){
+    border-right: 2px solid black;
+}
+.gameboard>div:nth-child(n+7){
+    border-bottom: 2px solid black;
+}
+
+.gameboard>div{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display:flex;
+    justify-content:center;
     align-items: center;
 }
-.board{
-    display:flex;
-    margin:auto;
-    flex-wrap: wrap;
-    height: 300px;
-    width: 300px;
-    margin-top:10px;
-}
-.board button{
-    background-color: rgb(32, 38, 46);
-    flex: 1 0 30%;
-    border: 1px solid white;
-    color:white;
-    cursor: pointer;
-    font-size: 30px;
-    padding: 0;
-}
-.board button:hover{
 
-    background-color: rgb(32, 38, 46,90%);
+.gameboard>div:hover{
+    background-color:grey;
+    cursor:pointer;
 }
-.board button:disabled{
-    background-color: black;
-    pointer-events: none;
+
+.reset-container{
+    margin-top:15px;
+    display: flex;
+    justify-content: center;
+    gap:10px;
 }
-.winner-text{
-    text-align: center;
+.reset-btn,.start-btn{
+    height:5vh;
+    width: 10vw;
+    font-size: 15px;
 }
+
+.reset-btn:hover,.start-btn:hover{
+    cursor: pointer;
+    
+}
+
+

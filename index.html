@@ -8,23 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-    <h1>Let's play Tic-Tac-Toe!</h1>
-    The objecive is to form three consecutive X's in any direction. Player 1 plays as X while player 2 plays as O.
-    Goodluck!
+    <h1 style="text-align:center">TIC TAC TOE</h1>
+    <div class = "roundcounter-container"></div>
+    <div class="gameboard-container">
+        <div class="gameboard">
+            <div class="gamefield" data-index-number="1"></div>
+            <div class="gamefield" data-index-number="2"></div>
+            <div class="gamefield" data-index-number="3"></div>
+            <div class="gamefield" data-index-number="4"></div>
+            <div class="gamefield" data-index-number="5"></div>
+            <div class="gamefield" data-index-number="6"></div>
+            <div class="gamefield" data-index-number="7"></div>
+            <div class="gamefield" data-index-number="8"></div>
+            <div class="gamefield" data-index-number="9"></div>
+        </div>
     </div>
-    <div class="board">
-        <button class="sq1"></button>
-        <button class="sq2"></button>
-        <button class="sq3"></button>
-        <button class="sq4"></button>
-        <button class="sq5"></button>
-        <button class="sq6"></button>
-        <button class="sq7"></button>
-        <button class="sq8"></button>
-        <button class="sq9"></button>
+    <div class = "reset-container">
+        <button class="reset-btn">Reset</button>
     </div>
-    <div class="winner-text"></div>
     <script src="script.js"></script>
 </body>
 </html>
