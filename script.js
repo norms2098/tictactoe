@@ -1,6 +1,6 @@
 const GameBoard = (() =>{
     let boardArray = ["","","","","","","","",""];
-    return { boardArray}
+    return { boardArray }
 })();
 
 //player things
@@ -14,7 +14,7 @@ const Player = (symbol) =>{
     return { getPlayerSymbol }
 }
 
-//controls the flow of the game
+//controls the flow of the game IIFE
 const gameFlowControl = (() =>{
     const playerO = Player("O");
     const playerX = Player("X");
@@ -38,6 +38,7 @@ const gameFlowControl = (() =>{
             return playerX.getPlayerSymbol();
         }   
     }
+
     const updateGameBoardArray = (index) =>{
         if (roundCounter %2 == 0){
             GameBoard.boardArray[parseInt(index)-1]="O";
