@@ -1,6 +1,7 @@
-const GameBoard = () =>{
+const GameBoard = (() =>{
     let boardArray = ["","","","","","","","",""];
-}
+    return { boardArray}
+})();
 
 //player things
 const Player = (symbol) =>{
@@ -37,9 +38,17 @@ const gameFlowControl = (() =>{
             return playerX.getPlayerSymbol();
         }   
     }
-   
+    const updateGameBoardArray = (index) =>{
+        if (roundCounter %2 == 0){
+            GameBoard.boardArray[parseInt(index)-1]="O";
+        }
+        else{
+            GameBoard.boardArray[parseInt(index)-1]="X";
+        }
+        console.log(GameBoard.boardArray);
+    }
     
-    return { getCurrentPlayer, roundCounter, gameoverChecker, isGameOver }
+    return { getCurrentPlayer, roundCounter, gameoverChecker, isGameOver, updateGameBoardArray }
 })();
 
 //controls the game displays
@@ -51,19 +60,17 @@ const gameDisplayControl = (() => {
             if(e.target.textContent !== ""){
                 return;
             }
-            e.target.textContent=gameFlowControl.getCurrentPlayer();
-            
-
+            e.target.textContent = gameFlowControl.getCurrentPlayer();
+            gameFlowControl.updateGameBoardArray(e.target.dataset.indexNumber)
             gameFlowControl.gameoverChecker();
-
            
         })
     })
 
-    const displayGameOver=()=>{
+    const displayGameOver = () => {
         console.log('gameover')
     }
 
-    return { displayGameOver}
+    return { displayGameOver , }
 })();
 
